@@ -1078,12 +1078,14 @@ public class LandClaimLib extends JavaPlugin
 
         //player must have sufficient unused claim blocks
         int area = Math.abs((gc.getBlockX() - lc.getBlockX() + 1) * (gc.getBlockZ() - lc.getBlockZ() + 1));
-        int remaining = playerData.getRemainingClaimBlocks();
-        if (remaining < area)
-        {
-            LandClaimLib.sendMessage(player, TextMode.Err, Messages.CreateClaimInsufficientBlocks, String.valueOf(area - remaining));
-            LandClaimLib.instance.dataStore.tryAdvertiseAdminAlternatives(player);
-            return null;
+        if (price == null) {
+            int remaining = playerData.getRemainingClaimBlocks();
+            if (remaining < area)
+            {
+                LandClaimLib.sendMessage(player, TextMode.Err, Messages.CreateClaimInsufficientBlocks, String.valueOf(area - remaining));
+                LandClaimLib.instance.dataStore.tryAdvertiseAdminAlternatives(player);
+                return null;
+            }
         }
 
         CreateClaimResult result = this.dataStore.createClaim(lc.getWorld(),
