@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.griefprevention</groupId>
-    <artifactId>GriefPrevention</artifactId>
-    <version>16.19-SNAPSHOT</version>
+    <groupId>com.opticalraze</groupId>
+    <artifactId>LandClaimLib</artifactId>
+    <version>1.0</version>
 
-    <name>GriefPrevention</name>
-    <description>The official self-service anti-griefing Bukkit plugin for Minecraft servers since 2011.</description>
-    <inceptionYear>2011</inceptionYear>
+    <name>LandClaimLib</name>
+    <description>Land Claiming Library for Bukkit built on top of GriefPrevention.</description>
+    <inceptionYear>2023</inceptionYear>
     <packaging>jar</packaging>
 
     <licenses>
@@ -22,16 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/TechFortress/GriefPrevention/issues</url>
-    </issueManagement>
-
-    <scm>
-        <developerConnection>scm:git:https://github.com/TechFortress/GriefPrevention.git</developerConnection>
-        <tag>16.18</tag>
-    </scm>
 
     <repositories>
         <repository>
@@ -74,7 +64,7 @@
                 </configuration>
             </plugin>
             <!-- Append git commit hash to version -->
-            <plugin>
+            <!--<plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
                 <version>4.0.3</version>
@@ -87,7 +77,7 @@
                         <phase>validate</phase>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
